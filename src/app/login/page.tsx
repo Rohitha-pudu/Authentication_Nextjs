@@ -23,7 +23,7 @@ const Login = () => {
     
     toast('Login Was Successfull!',
   {
-    icon: '💌',
+    icon: <span role="img" aria-label="Clapping Hands">💌</span>,
     style: {
       borderRadius: '10px',
       background: 'black',
@@ -39,7 +39,7 @@ const Login = () => {
       console.log("failed sign up"+error.message);
       toast('Invalid Login',
   {
-    icon: '😑',
+    icon:<span role="img" aria-label="Clapping Hands">😑</span>,
     style: {
       borderRadius: '10px',
       background: 'red',

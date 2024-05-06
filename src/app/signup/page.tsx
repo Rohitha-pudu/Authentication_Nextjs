@@ -23,7 +23,7 @@ const SignUp = () => {
   router.push("/login");
   toast('SignUp Was Successfull!',
   {
-    icon: '👏🏻',
+    icon:<span role="img" aria-label="Clapping Hands">👏🏻</span>,
     style: {
       borderRadius: '10px',
       background: 'black',
@@ -51,7 +51,7 @@ const SignUp = () => {
       setButtonDisabled(true);
       toast('Invalid SignUp',
       {
-        icon: '😴',
+        icon:<span role="img" aria-label="Clapping Hands">😴</span>,
         style: {
           borderRadius: '10px',
           background: 'red',

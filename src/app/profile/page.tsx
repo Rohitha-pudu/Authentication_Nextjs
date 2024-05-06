@@ -16,7 +16,7 @@ export default function ProfilePage() {
             router.push('/login')
             toast('Come back Soon',
             {
-              icon: '😔',
+              icon:<span role="img" aria-label="Clapping Hands">😔</span>,
               style: {
                 borderRadius: '10px',
                 background: 'black',
