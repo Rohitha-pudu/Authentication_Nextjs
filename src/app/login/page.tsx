@@ -101,7 +101,7 @@ const Login = () => {
     >
       {buttonDisabled?"No LogIn":"Log In"}
     </button>
-    <Link href="/signup"><span className="text-[#5f5e5e]">Don't have an account?</span><span
+    <Link href="/signup"><span className="text-[#5f5e5e]">Dont have an account?</span><span
     className="underline"
     >
       Sign Up here</span></Link>

@@ -107,7 +107,7 @@ const SignUp = () => {
       focus:outline-none">
        {buttonDisabled?"No SignUp":"Sign up"}
       </button>
-      <Link href="/login"><span className="text-[#5f5e5e]">Don't have an account?</span><span
+      <Link href="/login"><span className="text-[#5f5e5e]">Dont have an account?</span><span
     className="underline"
     >
       Login here</span></Link>
