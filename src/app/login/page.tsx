@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import {toast,Toaster} from "react-hot-toast"
 import axios from "axios"
+import Typewriter from 'typewriter-effect';
 
 
 
@@ -72,7 +73,17 @@ const Login = () => {
       className='text-[26px] font-medium' 
       >Processing.....</div>:<div
       className='text-[36px] font-bold' 
-      >Log In</div>}
+      >
+        Log In
+        <Typewriter
+  options={{
+    strings: ['Hello', 'World'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+
+        </div>}
       <hr/>
     <label htmlFor="email" className="mt-[70px] mb-2 text-[16px] font-normal">Email</label>
     <input
@@ -80,6 +91,7 @@ const Login = () => {
     focus:outline-none"
     type="email"
     id="email"
+
     placeholder="email"
     value={user.email}
     onChange={(e)=>setUser({...user,email:e.target.value})}

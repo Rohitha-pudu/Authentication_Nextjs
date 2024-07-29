@@ -6,7 +6,26 @@ import axios from "axios"
 import { useRouter } from "next/navigation"
 import { toast } from "react-hot-toast";
 
+import gsap from "gsap-trial"
+import {SplitText} from "gsap-trial/SplitText"
+import ScrollTrigger from "gsap-trial/ScrollTrigger"
+
+
 const SignUp = () => {
+  // Split Text
+  gsap.registerPlugin(SplitText);
+  let mySplit=new SplitText(".split",{type:"chars"});
+  let chars=mySplit.chars;
+  gsap.from(chars,{
+    xPercent:180,
+    rotateY:190,
+    rotateZ:100,
+    ease:"back.out",
+    duration:3
+  });
+  // Split Text
+
+
   const router=useRouter();
   const [user,setUser]=React.useState({
     email:"",
@@ -64,13 +83,13 @@ const SignUp = () => {
   },[user])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2
+    <div className="content flex flex-col items-center justify-center min-h-screen py-2
     border-x-[240px] border-y-[50px] border-dashed ">
       {loading?<div
       className='text-[26px] font-medium' 
       >Processing.....</div>:<div
       className='text-[36px] font-bold' 
-      >Sign Up</div>}
+      ><span className='split'>Sign Up</span></div>}
       <label htmlFor="username" className="mt-[50px] text-[16px] font-normal mb-2">User Name</label>
       <input
       className="rounded-lg mb-4 p-3 border-[1.8px] border-black-600 focus:border-black
@@ -111,6 +130,7 @@ const SignUp = () => {
     className="underline"
     >
       Login here</span></Link>
+      
     </div>
   )
 }
