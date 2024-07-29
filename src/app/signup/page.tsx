@@ -6,23 +6,10 @@ import axios from "axios"
 import { useRouter } from "next/navigation"
 import { toast } from "react-hot-toast";
 
-import gsap from "gsap-trial"
-import {SplitText} from "gsap-trial/SplitText"
-import ScrollTrigger from "gsap-trial/ScrollTrigger"
-
 
 const SignUp = () => {
   // Split Text
-  gsap.registerPlugin(SplitText);
-  let mySplit=new SplitText(".split",{type:"chars"});
-  let chars=mySplit.chars;
-  gsap.from(chars,{
-    xPercent:180,
-    rotateY:190,
-    rotateZ:100,
-    ease:"back.out",
-    duration:3
-  });
+ 
   // Split Text
 
 
